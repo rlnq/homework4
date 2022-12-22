@@ -1,0 +1,10 @@
+[group1]
+host1 ansible_host=20.0.104.76
+[group2]
+host2 ansible_host=20.0.104.41
+[group3]
+host3 ansible_host=3.122.246.146
+[iaas:children]
+group1
+group2
+

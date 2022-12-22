@@ -1,0 +1,9 @@
+---
+# tasks file for empty-file-0500
+
+  - name: create file
+    file:
+     path: /etc/iaas
+     state: touch
+     mode: 0500
+
