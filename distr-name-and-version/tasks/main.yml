@@ -1,21 +1,13 @@
 ---
 # tasks file for distr-name-and-version
-  - name: Check the system information and print in the registered variables
-    shell:
-        "lsb_release -a | grep -E 'Description'"
-    register: os_info
 
-  - name: Print OS name and version
+  - name: Print dist name and version
     debug:
-      msg: "{{os_info}}"
-
-  - name: Check and print the hostname in the registered variable
-    debug:
-      var=ansible_hostname
-    register: hostname_info
-
+        msg:
+         - "{{ansible_distribution}} {{ansible_distribution_version}}"
+    register: dist_info
 
   - name: Printing hostnames together with distro name/version
     debug:
         msg:
-        - "Hostname:{{hostname_info.ansible_hostname}} - {{os_info.stdout_lines}}"
+        - "{{ansible_hostname}}: {{dist_info.msg}}"
