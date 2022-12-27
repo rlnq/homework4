@@ -19,3 +19,6 @@ Files:
 - fetch a linux distro name/version - [distr-name-and-version](https://github.com/rlnq/homework4/blob/master/distr-name-and-version/tasks/main.yml)
 
 Playbook for two roles - [side.yml](https://github.com/rlnq/homework4/blob/master/side.yml)
+
+![image](https://user-images.githubusercontent.com/117667360/209687469-fa2e8623-0752-403d-a426-294038eeef42.png)
+
